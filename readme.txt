@@ -1,2 +1,2 @@
-this is my persion git project
+this is my person git project
 study on 2020
