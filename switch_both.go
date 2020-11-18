@@ -15,6 +15,7 @@ func showCase(str string) {
 	}
 }
 
+//给 case 语句设置一个逗号分隔的列表,执行多情况
 func showCaseNoSensive(str string) {
 	switch str {
 	case "A", "a":
@@ -33,7 +34,9 @@ func main() {
 	showCase("A")
 	showCase("a")
 
-	//测试兼容情
+	//测试兼容情况
 	showCaseNoSensive("A")
 	showCaseNoSensive("a")
 }
+
+//参考文档:https://jingwei.link/2019/10/06/effective-name.html
