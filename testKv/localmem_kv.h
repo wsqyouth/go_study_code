@@ -28,7 +28,7 @@
 #include <sys/shm.h>
 #include <pthread.h>
 
-
+using namespace std;
 #define KV_MAGIC     0xAABBCCDD
 #define KEY_SIZE     64
 #define STAT_NUM     (2048)
