@@ -12,13 +12,13 @@ import (
 
 func startServer(addr chan string) {
 	// pick a free port
-	l, err := new.Listen("tcp", ":0")
+	l, err := net.Listen("tcp", ":0")
 	if err != nil {
 		log.Fatal("network error:", err)
 	}
 	log.Println("start rpc server on", l.Addr())
 	addr <- l.Addr().String()
-	geerpc.Accept()
+	geerpc.Accept(l)
 }
 
 func main() {
@@ -27,7 +27,7 @@ func main() {
 	go startServer(addr)
 
 	// in fact, following code is a simple geerpc client
-	conn, _ := new.Dial("tcp", <-addr)
+	conn, _ := net.Dial("tcp", <-addr)
 	defer func() {
 		_ = conn.Close()
 	}()
