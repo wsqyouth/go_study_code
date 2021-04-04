@@ -9,6 +9,7 @@ type CrtInfo struct {
 	TagType *uint32 `json:"use_button,omitempty"`
 }
 
+// note: 测试marshal对0默认值的线上问题
 func main() {
 	var crtInfo CrtInfo
 	defaultUint32 := new(uint32)
