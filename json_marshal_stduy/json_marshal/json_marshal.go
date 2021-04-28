@@ -16,9 +16,9 @@ type CrtInfoItem struct {
 
 func main() {
 
-	cardInfo := &CardInfo{}
+	//cardInfo := &CardInfo{}
 	var crtInfoItem CrtInfoItem
-	crtInfoItem.CardInfo = cardInfo
+	crtInfoItem.CardInfo = nil
 
 	b, err := json.Marshal(crtInfoItem)
 	if err != nil {
