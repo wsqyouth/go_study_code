@@ -4,6 +4,7 @@ go 1.16
 
 require (
 	github.com/go-redis/redis v6.15.9+incompatible
+	github.com/go-redis/redis/v7 v7.4.0 // indirect
 	github.com/hashicorp/memberlist v0.2.4
 	github.com/jinzhu/copier v0.3.2
 	github.com/onsi/ginkgo v1.16.4 // indirect
