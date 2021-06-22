@@ -3,12 +3,13 @@ this is my person git project
 
 ### 目录结构
 针对go基础库的使用,参考目录结构:
+```
 go_xxx:
     code: 01_time.go
     README.md
 xxx_study:
     存放的是第三方开源项目的学习
-
+```
 参考:https://github.com/gyuho/learn/tree/master/doc/
 
 ### commit结构
@@ -20,4 +21,4 @@ xxx_study:
 * test：增加测试
 * chore：构建过程或辅助工具的变动
 
- ### I am still learning, and I may say things out of ignorance
+### I am still learning, and I may say things out of ignorance
