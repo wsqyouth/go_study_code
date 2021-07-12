@@ -3,6 +3,7 @@ module github.com/wsqyouth/coopers_go_code
 go 1.16
 
 require (
+	github.com/apache/pulsar-client-go v0.5.0 // indirect
 	github.com/go-redis/redis v6.15.9+incompatible
 	github.com/go-redis/redis/v7 v7.4.0 // indirect
 	github.com/hashicorp/memberlist v0.2.4
