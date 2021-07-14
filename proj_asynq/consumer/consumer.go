@@ -4,7 +4,7 @@ import (
     "log"
 
     "github.com/hibiken/asynq"
-	"github.com/wsqyouth/coopers_go_code/go_asynq/tasks"
+	"github.com/wsqyouth/coopers_go_code/proj_asynq/tasks"
 )
 
 const redisAddr = "127.0.0.1:6379"
