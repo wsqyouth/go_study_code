@@ -1,7 +1,10 @@
 package tasks
 
 import (
+	"context"
+	"encoding/json"
 	"fmt"
+	"log"
 
 	"github.com/hibiken/asynq"
 )
@@ -27,7 +30,7 @@ type ImageResizePayload struct {
 //----------------------------------------------
 
 func NewEmailDeliveryTask(userID int, tmplID string) (*asynq.Task, error) {
-	payload, err := json.Marshal(EmailDeliveryPayload{UserID: userID, TemplateID: templID})
+	payload, err := json.Marshal(EmailDeliveryPayload{UserID: userID, TemplateID: tmplID})
 	if err != nil {
 		return nil, err
 	}
@@ -55,8 +58,9 @@ func HandleEmailDeliveryTask(ctx context.Context, t *asynq.Task) error {
 	if err := json.Unmarshal(t.Payload(), &p); err != nil {
 		return fmt.Errorf("json.Unmarshal failed: %v: %w", err, asynq.SkipRetry)
 	}
-	log.Printf("Sending Email to User: user_id=%d, template_id=%s", p.UserID, p.TemplateID)
+
 	// Email delivery code ...
+	log.Printf("[Counsumer] taskType: %v, Email user_id=%d, template_id=%s", t.Type(), p.UserID, p.TemplateID)
 	return nil
 }
 
@@ -66,15 +70,17 @@ type ImageProcessor struct {
 }
 
 func (p *ImageProcessor) ProcessTask(ctx context.Context, t *asynq.Task) error {
-	var p ImageResizePayload
-	if err := json.Unmarshal(t.Payload(), &p); err != nil {
+	var imagePayload ImageResizePayload
+	if err := json.Unmarshal(t.Payload(), &imagePayload); err != nil {
 		return fmt.Errorf("json.Unmarshal failed: %v: %w", err, asynq.SkipRetry)
 	}
-	log.Printf("Resizing image: src=%s", p.SourceURL)
+
 	// Image resizing code ...
+	log.Printf("[Counsumer] taskType: %v, Resizing image: url=%s", t.Type(), imagePayload.SourceURL)
 	return nil
 }
 
 func NewImageProcessor() *ImageProcessor {
 	// ... return an instance
+	return &ImageProcessor{}
 }
