@@ -69,18 +69,18 @@ type ImageProcessor struct {
 	// ... fields for struct
 }
 
-func (p *ImageProcessor) ProcessTask(ctx context.Context, t *asynq.Task) error {
-	var imagePayload ImageResizePayload
-	if err := json.Unmarshal(t.Payload(), &imagePayload); err != nil {
+func (processor *ImageProcessor) ProcessTask(ctx context.Context, t *asynq.Task) error {
+	var p ImageResizePayload
+	if err := json.Unmarshal(t.Payload(), &p); err != nil {
 		return fmt.Errorf("json.Unmarshal failed: %v: %w", err, asynq.SkipRetry)
 	}
 
 	// Image resizing code ...
-	log.Printf("[Counsumer] taskType: %v, Resizing image: url=%s", t.Type(), imagePayload.SourceURL)
+	log.Printf("[Counsumer] taskType: %v, Resizing image: url=%s", t.Type(), p.SourceURL)
 	return nil
 }
 
 func NewImageProcessor() *ImageProcessor {
-	// ... return an instance
+	// return an instance
 	return &ImageProcessor{}
 }
