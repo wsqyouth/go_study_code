@@ -24,9 +24,9 @@ func main() {
 	}
 }
 
-func batchGetResultNew(ctx context.Context, aidList []string) (err error) {
+func batchGetResultNew(ctx context.Context, urlLIst []string) (err error) {
 
-	nLen := len(aidList)
+	nLen := len(urlLIst)
 	maxGoroutine := nLen
 	if nLen > defultMaxGoRoutine {
 		maxGoroutine = defultMaxGoRoutine
@@ -36,8 +36,7 @@ func batchGetResultNew(ctx context.Context, aidList []string) (err error) {
 	for i := 0; i < maxGoroutine; i++ {
 		g.Go(func() (e error) {
 			for each := range ch {
-				//获取url body
-				//获取http请求并打印返回码
+				//获取url body. 获取http请求并打印返回码
 				resp, err := http.Get(each)
 				if err == nil {
 					fmt.Println(resp.Status)
@@ -50,7 +49,7 @@ func batchGetResultNew(ctx context.Context, aidList []string) (err error) {
 		})
 	}
 
-	for _, each := range aidList {
+	for _, each := range urlLIst {
 		ch <- each
 	}
 
