@@ -17,6 +17,9 @@ func main() {
 		"http://www.baidu.com",
 		"http://www.google.com",
 		"http://www.qq.cm",
+		"https://360.com/",
+		"https://360.com/",
+		"https://xueshu.baidu.com/",
 	}
 	err := batchGetResultNew(context.Background(), urls)
 	if err != nil {
@@ -38,13 +41,12 @@ func batchGetResultNew(ctx context.Context, urlLIst []string) (err error) {
 			for each := range ch {
 				//获取url body. 获取http请求并打印返回码
 				resp, err := http.Get(each)
-				if err == nil {
-					fmt.Println(resp.Status)
-					resp.Body.Close()
+				if err != nil {
+					return err
 				}
-				return err
+				fmt.Println(resp.Status)
+				resp.Body.Close()
 			}
-
 			return nil
 		})
 	}
