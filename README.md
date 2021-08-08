@@ -7,6 +7,8 @@ this is my person git project
 go_xxx:
     code: 01_time.go
     README.md
+xxx:
+    独立性项目,比如leetcode
 xxx_study:
     存放的是第三方开源项目的学习
 ```
