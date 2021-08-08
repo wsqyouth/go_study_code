@@ -8,7 +8,7 @@ LeetCode
 
 
 | Category | # | Title | Difficulty | Solution_Go | Solution_Cpp |
-|---| ----- | -------- | ---------- |---------- |
+|---| ----- | -------- | ---------- |---------- |---------- |
 | |1786| [Number of Restricted Paths From First to Last Node](https://leetcode.com/problems/number-of-restricted-paths-from-first-to-last-node/) | Medium || |
 | |1785| [Minimum Elements to Add to Form a Given Sum](https://leetcode.com/problems/minimum-elements-to-add-to-form-a-given-sum/) | Medium || |
 | |1784| [Check if Binary String Has at Most One Segment of Ones](https://leetcode.com/problems/check-if-binary-string-has-at-most-one-segment-of-ones/) | Easy || |
@@ -457,6 +457,8 @@ LeetCode
 | |1| [Two Sum](https://leetcode.com/problems/two-sum/)| Easy || |
 
 
+---
+ref_shell
 
 ``
  cat README.md | awk -F '|'  '{print "| |"$2"|",$3"|",$5,"|| |"}'  > my.md
