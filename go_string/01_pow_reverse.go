@@ -8,21 +8,21 @@ import (
 
 func main() {
 	var sum uint64
-	idSet:= []uint64{21}
+	idSet := []uint64{21}
 	for _, v := range idSet {
 		sum += uint64(math.Pow(2, float64(v)-1))
 	}
-	fmt.Println("sum",sum)
-	fmt.Printf("%b\n",sum)
+	fmt.Println("sum", sum)
+	fmt.Printf("%b\n", sum)
 
-	b := reverse(strconv.FormatInt(int64(sum),2))
+	b := reverse(strconv.FormatInt(int64(sum), 2))
 	fmt.Println(b)
 
 	var outIdSet []uint64
-	for k,v:= range b {
-		if v == '1'{
-		outIdSet = append(outIdSet,uint64(k+1))
-	}
+	for k, v := range b {
+		if v == '1' {
+			outIdSet = append(outIdSet, uint64(k+1))
+		}
 	}
 	fmt.Println(outIdSet)
 }
