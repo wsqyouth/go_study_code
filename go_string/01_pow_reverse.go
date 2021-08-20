@@ -15,6 +15,8 @@ func main() {
 	fmt.Println("sum", sum)
 	fmt.Printf("%b\n", sum)
 
+	//sum = 219152384 //混投多[21 25 27 28]
+	sum = 1048576//单投21
 	b := reverse(strconv.FormatInt(int64(sum), 2))
 	fmt.Println(b)
 
