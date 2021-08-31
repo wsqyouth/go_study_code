@@ -26,7 +26,7 @@ func main() {
     fmt.Println("hello",obj)
 }
 
-// Process 针对一个对象呃逆多个成员组装生成其他成员的批量处理方法
+// Process 针对一个对象的多个成员组装生成其他成员的批量处理方法
 func Process(ctx context.Context, obj *Obj) (err error){
     type setField func(ctx context.Context, obj *Obj) (err error)
     funcs := []setField{
