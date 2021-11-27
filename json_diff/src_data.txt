@@ -1,0 +1,85 @@
+		<option name="NOT_USED" value="0" desc="不使用，仅公众号流量可使用" />
+
+		<option name="VIEW_DETAILS" value="1" desc="查看详情" />
+
+		<option name="GET_COUPONS" value="2" desc="领取优惠，选择领取优惠，需在详情页中可直接领取优惠，否则广告将会被审核驳回" />
+
+		<option name="MAKE_AN_APPOINTMENT" value="3" desc="预约活动，选择预约活动，需在详情页中体现活动预约入口，否则广告将会被审核驳回" />
+
+		<option name="BUY_NOW" value="4" desc="立即购买，当且仅当推广目标为电商时可使用" />
+
+		<option name="GO_SHOPPING" value="5" desc="去逛逛，当且仅当推广目标为电商时可使用" />
+
+		<option name="ENTER_MINI_PROGRAM" value="6" desc="进入小程序，仅能使用于投放小程序落地页" />
+
+		<option name="ENTER_MINI_GAME" value="7" desc="进入小游戏，仅能使用于投放小游戏落地页" />
+
+		<option name="APPLY_NOW" value="8" desc="立即申请" />
+
+		<option name="BOOK_NOW" value="9" desc="立即预定" />
+
+		<option name="RESERVATION_BUY" value="10" desc="预约购买" />
+
+		<option name="CONSULT_NOW" value="11" desc="立即咨询" />
+
+		<option name="BOOK_DRIVE" value="12" desc="预约试驾" />
+
+		<option name="ENTER_OFFICIAL_ACCOUNTS" value="13" desc="了解公众号" />
+
+		<option name="PLAY_NOW" value="14" desc="立即玩" />
+
+		<option name="OPEN_MINI_GAME" value="15" desc="打开游戏" />
+
+		<option name="DOWNLOAD_APP" value="16" desc="下载应用" />
+
+		<option name="DOWNLOAD_GAME" value="17" desc="下载游戏" />
+
+		<option name="GET_SAMPLES" value="23" desc="领取小样" />
+
+		<option name="TRY_NOW" value="29" desc="立即体验" />
+
+		<option name="GET_IT_NOW" value="31" desc="立即领取" />
+
+		<option name="BUY_ASAP" value="32" desc="立即抢购" />
+
+		<option name="DOWNLOAD_NOW" value="33" desc="立即下载" />
+
+		<option name="VIEW_APPS" value="34" desc="查看应用" />
+
+		<option name="MORE_INFO" value="35" desc="了解更多" />
+
+		<option name="GET_VOUCHERS" value="41" desc="领券" />
+
+		<option name="FOLLOW_OFFICIAL_ACCOUNT" value="43" desc="关注公众号" />
+
+		<option name="READ_NOVELS" value="44" desc="阅读小说" />
+
+		<option name="GO_TO_JD" value="45" desc="去京东" hidden="yes" />
+
+		<option name="GO_TO_PDD" value="46" desc="去拼多多" hidden="yes" />
+
+		<option name="GO_TO_SUNING" value="47" desc="去苏宁" hidden="yes" />
+
+		<option name="GO_TO_VIP" value="48" desc="去唯品会" hidden="yes" />
+
+		<option name="GO_TO_XIAOHONGSHU" value="49" desc="去小红书" hidden="yes" />
+
+		<option name="GO_TO_KUAISHOU" value="50" desc="去快手" hidden="yes" />
+
+		<option name="WATCH_LIVE" value="52" desc="观看直播" />
+
+		<option name="RESERVE_NOW" value="53" desc="立即预约" />
+
+		<option name="OPEN_APP" value="54" desc="打开应用" />
+		<option name="ALREADY_INSTALL" value="55" desc="已安装" />
+
+		<option name="RESERVE_LIVE" value="56" desc=" 预约直播"  hidden="yes"/>
+
+		<option name="SETUP_NOW" value="57" desc="立即开通" />
+		<option name="SECKILL_NOW" value="58" desc="立即秒杀" />
+		<option name="TRY_PLAY_NOW" value="59" desc="立即试玩" />
+		<option name="INSTALL_NOW" value="60" desc="立即安装" />
+		<option name="FOLLOW_CHANNELS" value="61" desc="关注视频号" />
+		<option name="MORE_ABOUT_CHANNELS" value="62" desc="了解视频号" />
+		<option name="MORE_ABOUT_OFFICIAL_ACCOUNT_CHT" value="63" desc="了解公眾號" />
+		<option name="FOLLOW_OFFICIAL_ACCOUNT_CHT" value="64" desc="關註公眾號" />

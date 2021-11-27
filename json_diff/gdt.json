@@ -1,0 +1,151 @@
+{
+  "adcreative_template_list": [
+    {
+      "adcreative_template_id": "1708",
+      "buying_type": "BUYINGTYPE_CONTRACT",
+      "adcreative_template_page_type_list": [
+        {
+          "promoted_object_type": "PROMOTED_OBJECT_TYPE_APP_ANDROID",
+          "description": "",
+          "landing_page_config": {
+            "required": false,
+            "support_page_type_list": [
+              {
+                "page_type": "PAGE_TYPE_CANVAS_WECHAT",
+                "description": "微信原生推广页，通过微信创建的落地页类型",
+                "support_link_name_type": {
+                  "required": false,
+                  "list": [
+                    {
+                      "link_name_type": "MORE_INFO",
+                      "description": "了解更多"
+                    },
+                    {
+                      "link_name_type": "DOWNLOAD_NOW",
+                      "description": "立即下载"
+                    },
+                    {
+                      "link_name_type": "GET_IT_NOW",
+                      "description": "立即领取"
+                    },
+                    {
+                      "link_name_type": "TRY_PLAY_NOW",
+                      "description": "立即试玩"
+                    },
+                    {
+                      "link_name_type": "TRY_NOW",
+                      "description": "立即体验"
+                    },
+                    {
+                      "link_name_type": "BUY_ASAP",
+                      "description": "立即抢购"
+                    },
+                    {
+                      "link_name_type": "SETUP_NOW",
+                      "description": "立即开通"
+                    },
+                    {
+                      "link_name_type": "SECKILL_NOW",
+                      "description": "立即秒杀"
+                    },
+                    {
+                      "link_name_type": "DOWNLOAD_APP",
+                      "description": "下载应用"
+                    },
+                    {
+                      "link_name_type": "DOWNLOAD_GAME",
+                      "description": "下载游戏"
+                    },
+                    {
+                      "link_name_type": "INSTALL_NOW",
+                      "description": "立即安装"
+                    },
+                    {
+                      "link_name_type": "RESERVE_NOW",
+                      "description": "立即预约"
+                    }
+                  ]
+                },
+                "support_link_page_type": {
+                  "required": false,
+                  "list": [
+                    {
+                      "link_page_type": "LINK_PAGE_TYPE_CANVAS_WECHAT",
+                      "description": "微信原生页"
+                    }
+                  ]
+                }
+              },
+              {
+                "page_type": "PAGE_TYPE_DEFAULT",
+                "description": "默认落地页",
+                "support_link_name_type": {
+                  "required": false,
+                  "list": [
+                    {
+                      "link_name_type": "MORE_INFO",
+                      "description": "了解更多"
+                    },
+                    {
+                      "link_name_type": "DOWNLOAD_NOW",
+                      "description": "立即下载"
+                    },
+                    {
+                      "link_name_type": "GET_IT_NOW",
+                      "description": "立即领取"
+                    },
+                    {
+                      "link_name_type": "TRY_PLAY_NOW",
+                      "description": "立即试玩"
+                    },
+                    {
+                      "link_name_type": "TRY_NOW",
+                      "description": "立即体验"
+                    },
+                    {
+                      "link_name_type": "BUY_ASAP",
+                      "description": "立即抢购"
+                    },
+                    {
+                      "link_name_type": "SETUP_NOW",
+                      "description": "立即开通"
+                    },
+                    {
+                      "link_name_type": "SECKILL_NOW",
+                      "description": "立即秒杀"
+                    },
+                    {
+                      "link_name_type": "DOWNLOAD_APP",
+                      "description": "下载应用"
+                    },
+                    {
+                      "link_name_type": "DOWNLOAD_GAME",
+                      "description": "下载游戏"
+                    },
+                    {
+                      "link_name_type": "INSTALL_NOW",
+                      "description": "立即安装"
+                    },
+                    {
+                      "link_name_type": "RESERVE_NOW",
+                      "description": "立即预约"
+                    }
+                  ]
+                },
+                "support_link_page_type": {
+                  "required": false,
+                  "list": [
+                    {
+                      "link_page_type": "LINK_PAGE_TYPE_DEFAULT",
+                      "description": "默认落地页"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

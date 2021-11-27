@@ -1,0 +1,548 @@
+{
+  "adcreative_template_list": [
+    {
+      "adcreative_template_id": "1708",
+      "buying_type": "BUYINGTYPE_CONTRACT",
+      "adcreative_template_page_type_list": [
+        {
+          "promoted_object_type": "PROMOTED_OBJECT_TYPE_APP_ANDROID",
+          "landing_page_config": {
+            "support_page_type_list": [
+              {
+                "page_type": "PAGE_TYPE_CANVAS_WECHAT",
+                "description": "原生推广页",
+                "support_link_page_type": {
+                  "list": [
+                    {
+                      "description": "原生推广页",
+                      "link_page_type": "LINK_PAGE_TYPE_CANVAS_WECHAT"
+                    },
+                    {
+                      "description": "预约面板",
+                      "link_page_type": "LINK_PAGE_TYPE_WECHAT_MOMENTS_SUBSCRIPTION"
+                    }
+                  ]
+                },
+                "support_link_name_type": {
+                  "list": [
+                    {
+                      "description": "了解更多",
+                      "link_name_type": "MORE_INFO"
+                    },
+                    {
+                      "description": "下载应用",
+                      "link_name_type": "DOWNLOAD_APP"
+                    },
+                    {
+                      "description": "下载游戏",
+                      "link_name_type": "DOWNLOAD_GAME"
+                    },
+                    {
+                      "description": "立即预约",
+                      "link_name_type": "RESERVE_NOW"
+                    },
+                    {
+                      "description": "立即下载",
+                      "link_name_type": "DOWNLOAD_NOW"
+                    },
+                    {
+                      "description": "立即领取",
+                      "link_name_type": "GET_IT_NOW"
+                    },
+                    {
+                      "description": "立即试玩",
+                      "link_name_type": "TRY_PLAY_NOW"
+                    },
+                    {
+                      "description": "立即体验",
+                      "link_name_type": "TRY_NOW"
+                    },
+                    {
+                      "description": "立即抢购",
+                      "link_name_type": "BUY_ASAP"
+                    },
+                    {
+                      "description": "立即开通",
+                      "link_name_type": "SETUP_NOW"
+                    },
+                    {
+                      "description": "立即秒杀",
+                      "link_name_type": "SECKILL_NOW"
+                    },
+                    {
+                      "description": "立即安装",
+                      "link_name_type": "INSTALL_NOW"
+                    }
+                  ]
+                }
+              },
+              {
+                "page_type": "PAGE_TYPE_DEFAULT",
+                "description": "自定义链接",
+                "support_link_page_type": {
+                  "list": [
+                    {
+                      "description": "自定义链接",
+                      "link_page_type": "LINK_PAGE_TYPE_DEFAULT"
+                    },
+                    {
+                      "description": "预约面板",
+                      "link_page_type": "LINK_PAGE_TYPE_WECHAT_MOMENTS_SUBSCRIPTION"
+                    }
+                  ]
+                },
+                "support_link_name_type": {
+                  "list": [
+                    {
+                      "description": "了解更多",
+                      "link_name_type": "MORE_INFO"
+                    },
+                    {
+                      "description": "下载应用",
+                      "link_name_type": "DOWNLOAD_APP"
+                    },
+                    {
+                      "description": "下载游戏",
+                      "link_name_type": "DOWNLOAD_GAME"
+                    },
+                    {
+                      "description": "立即预约",
+                      "link_name_type": "RESERVE_NOW"
+                    },
+                    {
+                      "description": "立即下载",
+                      "link_name_type": "DOWNLOAD_NOW"
+                    },
+                    {
+                      "description": "立即领取",
+                      "link_name_type": "GET_IT_NOW"
+                    },
+                    {
+                      "description": "立即试玩",
+                      "link_name_type": "TRY_PLAY_NOW"
+                    },
+                    {
+                      "description": "立即体验",
+                      "link_name_type": "TRY_NOW"
+                    },
+                    {
+                      "description": "立即抢购",
+                      "link_name_type": "BUY_ASAP"
+                    },
+                    {
+                      "description": "立即开通",
+                      "link_name_type": "SETUP_NOW"
+                    },
+                    {
+                      "description": "立即秒杀",
+                      "link_name_type": "SECKILL_NOW"
+                    },
+                    {
+                      "description": "立即安装",
+                      "link_name_type": "INSTALL_NOW"
+                    }
+                  ]
+                }
+              },
+              {
+                "page_type": "PAGE_TYPE_MOMENTS_SIMPLE_NATIVE_WECHAT",
+                "description": "简版原生页",
+                "support_link_page_type": {
+                  "list": [
+                    {
+                      "description": "简版原生页",
+                      "link_page_type": "LINK_PAGE_TYPE_WECHAT_MOMENTS_SIMPLE_NATIVE"
+                    },
+                    {
+                      "description": "预约面板",
+                      "link_page_type": "LINK_PAGE_TYPE_WECHAT_MOMENTS_SUBSCRIPTION"
+                    }
+                  ]
+                },
+                "support_link_name_type": {
+                  "list": [
+                    {
+                      "description": "了解更多",
+                      "link_name_type": "MORE_INFO"
+                    },
+                    {
+                      "description": "下载应用",
+                      "link_name_type": "DOWNLOAD_APP"
+                    },
+                    {
+                      "description": "下载游戏",
+                      "link_name_type": "DOWNLOAD_GAME"
+                    },
+                    {
+                      "description": "立即预约",
+                      "link_name_type": "RESERVE_NOW"
+                    },
+                    {
+                      "description": "立即下载",
+                      "link_name_type": "DOWNLOAD_NOW"
+                    },
+                    {
+                      "description": "立即领取",
+                      "link_name_type": "GET_IT_NOW"
+                    },
+                    {
+                      "description": "立即试玩",
+                      "link_name_type": "TRY_PLAY_NOW"
+                    },
+                    {
+                      "description": "立即体验",
+                      "link_name_type": "TRY_NOW"
+                    },
+                    {
+                      "description": "立即抢购",
+                      "link_name_type": "BUY_ASAP"
+                    },
+                    {
+                      "description": "立即开通",
+                      "link_name_type": "SETUP_NOW"
+                    },
+                    {
+                      "description": "立即秒杀",
+                      "link_name_type": "SECKILL_NOW"
+                    },
+                    {
+                      "description": "立即安装",
+                      "link_name_type": "INSTALL_NOW"
+                    }
+                  ]
+                }
+              },
+              {
+                "page_type": "PAGE_TYPE_MINI_PROGRAM_WECHAT",
+                "description": "微信小程序",
+                "support_link_page_type": {
+                  "list": [
+                    {
+                      "description": "微信小程序",
+                      "link_page_type": "LINK_PAGE_TYPE_MINI_PROGRAM_WECHAT"
+                    },
+                    {
+                      "description": "预约面板",
+                      "link_page_type": "LINK_PAGE_TYPE_WECHAT_MOMENTS_SUBSCRIPTION"
+                    }
+                  ]
+                },
+                "support_link_name_type": {
+                  "list": [
+                    {
+                      "description": "了解更多",
+                      "link_name_type": "MORE_INFO"
+                    },
+                    {
+                      "description": "下载应用",
+                      "link_name_type": "DOWNLOAD_APP"
+                    },
+                    {
+                      "description": "下载游戏",
+                      "link_name_type": "DOWNLOAD_GAME"
+                    },
+                    {
+                      "description": "立即预约",
+                      "link_name_type": "RESERVE_NOW"
+                    },
+                    {
+                      "description": "立即下载",
+                      "link_name_type": "DOWNLOAD_NOW"
+                    },
+                    {
+                      "description": "立即领取",
+                      "link_name_type": "GET_IT_NOW"
+                    },
+                    {
+                      "description": "立即试玩",
+                      "link_name_type": "TRY_PLAY_NOW"
+                    },
+                    {
+                      "description": "立即体验",
+                      "link_name_type": "TRY_NOW"
+                    },
+                    {
+                      "description": "立即抢购",
+                      "link_name_type": "BUY_ASAP"
+                    },
+                    {
+                      "description": "立即开通",
+                      "link_name_type": "SETUP_NOW"
+                    },
+                    {
+                      "description": "立即秒杀",
+                      "link_name_type": "SECKILL_NOW"
+                    },
+                    {
+                      "description": "立即安装",
+                      "link_name_type": "INSTALL_NOW"
+                    }
+                  ]
+                }
+              },
+              {
+                "page_type": "PAGE_TYPE_YOUZAN_WECHAT_MINIPROGRAM",
+                "description": "有赞小程序",
+                "support_link_page_type": {
+                  "list": [
+                    {
+                      "description": "有赞小程序",
+                      "link_page_type": "LINK_PAGE_TYPE_YOUZAN_WECHAT_MINIPROGRAM"
+                    },
+                    {
+                      "description": "预约面板",
+                      "link_page_type": "LINK_PAGE_TYPE_WECHAT_MOMENTS_SUBSCRIPTION"
+                    }
+                  ]
+                },
+                "support_link_name_type": {
+                  "list": [
+                    {
+                      "description": "了解更多",
+                      "link_name_type": "MORE_INFO"
+                    },
+                    {
+                      "description": "下载应用",
+                      "link_name_type": "DOWNLOAD_APP"
+                    },
+                    {
+                      "description": "下载游戏",
+                      "link_name_type": "DOWNLOAD_GAME"
+                    },
+                    {
+                      "description": "立即预约",
+                      "link_name_type": "RESERVE_NOW"
+                    },
+                    {
+                      "description": "立即下载",
+                      "link_name_type": "DOWNLOAD_NOW"
+                    },
+                    {
+                      "description": "立即领取",
+                      "link_name_type": "GET_IT_NOW"
+                    },
+                    {
+                      "description": "立即试玩",
+                      "link_name_type": "TRY_PLAY_NOW"
+                    },
+                    {
+                      "description": "立即体验",
+                      "link_name_type": "TRY_NOW"
+                    },
+                    {
+                      "description": "立即抢购",
+                      "link_name_type": "BUY_ASAP"
+                    },
+                    {
+                      "description": "立即开通",
+                      "link_name_type": "SETUP_NOW"
+                    },
+                    {
+                      "description": "立即秒杀",
+                      "link_name_type": "SECKILL_NOW"
+                    },
+                    {
+                      "description": "立即安装",
+                      "link_name_type": "INSTALL_NOW"
+                    }
+                  ]
+                }
+              },
+              {
+                "page_type": "PAGE_TYPE_WEIMOB_WECHAT_MINIPROGRAM",
+                "description": "微盟小程序",
+                "support_link_page_type": {
+                  "list": [
+                    {
+                      "description": "微盟小程序",
+                      "link_page_type": "LINK_PAGE_TYPE_WEIMOB_WECHAT_MINIPROGRAM"
+                    },
+                    {
+                      "description": "预约面板",
+                      "link_page_type": "LINK_PAGE_TYPE_WECHAT_MOMENTS_SUBSCRIPTION"
+                    }
+                  ]
+                },
+                "support_link_name_type": {
+                  "list": [
+                    {
+                      "description": "了解更多",
+                      "link_name_type": "MORE_INFO"
+                    },
+                    {
+                      "description": "下载应用",
+                      "link_name_type": "DOWNLOAD_APP"
+                    },
+                    {
+                      "description": "下载游戏",
+                      "link_name_type": "DOWNLOAD_GAME"
+                    },
+                    {
+                      "description": "立即预约",
+                      "link_name_type": "RESERVE_NOW"
+                    },
+                    {
+                      "description": "立即下载",
+                      "link_name_type": "DOWNLOAD_NOW"
+                    },
+                    {
+                      "description": "立即领取",
+                      "link_name_type": "GET_IT_NOW"
+                    },
+                    {
+                      "description": "立即试玩",
+                      "link_name_type": "TRY_PLAY_NOW"
+                    },
+                    {
+                      "description": "立即体验",
+                      "link_name_type": "TRY_NOW"
+                    },
+                    {
+                      "description": "立即抢购",
+                      "link_name_type": "BUY_ASAP"
+                    },
+                    {
+                      "description": "立即开通",
+                      "link_name_type": "SETUP_NOW"
+                    },
+                    {
+                      "description": "立即秒杀",
+                      "link_name_type": "SECKILL_NOW"
+                    },
+                    {
+                      "description": "立即安装",
+                      "link_name_type": "INSTALL_NOW"
+                    }
+                  ]
+                }
+              },
+              {
+                "page_type": "PAGE_TYPE_TSA_APP",
+                "description": "蹊径落地页",
+                "support_link_page_type": {
+                  "list": []
+                },
+                "support_link_name_type": {
+                  "list": [
+                    {
+                      "description": "了解更多",
+                      "link_name_type": "MORE_INFO"
+                    },
+                    {
+                      "description": "下载应用",
+                      "link_name_type": "DOWNLOAD_APP"
+                    },
+                    {
+                      "description": "下载游戏",
+                      "link_name_type": "DOWNLOAD_GAME"
+                    },
+                    {
+                      "description": "立即预约",
+                      "link_name_type": "RESERVE_NOW"
+                    },
+                    {
+                      "description": "立即下载",
+                      "link_name_type": "DOWNLOAD_NOW"
+                    },
+                    {
+                      "description": "立即领取",
+                      "link_name_type": "GET_IT_NOW"
+                    },
+                    {
+                      "description": "立即试玩",
+                      "link_name_type": "TRY_PLAY_NOW"
+                    },
+                    {
+                      "description": "立即体验",
+                      "link_name_type": "TRY_NOW"
+                    },
+                    {
+                      "description": "立即抢购",
+                      "link_name_type": "BUY_ASAP"
+                    },
+                    {
+                      "description": "立即开通",
+                      "link_name_type": "SETUP_NOW"
+                    },
+                    {
+                      "description": "立即秒杀",
+                      "link_name_type": "SECKILL_NOW"
+                    },
+                    {
+                      "description": "立即安装",
+                      "link_name_type": "INSTALL_NOW"
+                    }
+                  ]
+                }
+              },
+              {
+                "page_type": "PAGE_TYPE_WECHAT_RED_PACKET_COVER",
+                "description": "红包封面",
+                "support_link_page_type": {
+                  "list": [
+                    {
+                      "description": "红包封面",
+                      "link_page_type": "LINK_PAGE_TYPE_WECHAT_RED_PACKET_COVER"
+                    }
+                  ]
+                },
+                "support_link_name_type": {
+                  "list": [
+                    {
+                      "description": "了解更多",
+                      "link_name_type": "MORE_INFO"
+                    },
+                    {
+                      "description": "下载应用",
+                      "link_name_type": "DOWNLOAD_APP"
+                    },
+                    {
+                      "description": "下载游戏",
+                      "link_name_type": "DOWNLOAD_GAME"
+                    },
+                    {
+                      "description": "立即预约",
+                      "link_name_type": "RESERVE_NOW"
+                    },
+                    {
+                      "description": "立即下载",
+                      "link_name_type": "DOWNLOAD_NOW"
+                    },
+                    {
+                      "description": "立即领取",
+                      "link_name_type": "GET_IT_NOW"
+                    },
+                    {
+                      "description": "立即试玩",
+                      "link_name_type": "TRY_PLAY_NOW"
+                    },
+                    {
+                      "description": "立即体验",
+                      "link_name_type": "TRY_NOW"
+                    },
+                    {
+                      "description": "立即抢购",
+                      "link_name_type": "BUY_ASAP"
+                    },
+                    {
+                      "description": "立即开通",
+                      "link_name_type": "SETUP_NOW"
+                    },
+                    {
+                      "description": "立即秒杀",
+                      "link_name_type": "SECKILL_NOW"
+                    },
+                    {
+                      "description": "立即安装",
+                      "link_name_type": "INSTALL_NOW"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

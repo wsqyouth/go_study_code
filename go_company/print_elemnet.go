@@ -106,40 +106,72 @@ func PrintSimpleTypeString() {
 	}
 }
 
-func main() {
-	srcStr := []string{
-		"wechat_finder_head_switch",
-		//"end_cover_type",
-		//"end_cover_image_url",
-		//"end_cover_desc",
-		//"end_cover_title",
-		//"end_cover_action_title",
-		//"mask_cover_switch",
-		//"mask_cover_type",
-		//"mask_cover_ambient_video_url",
-		//"mask_cover_ambient_end_url",
-		//"scan_switch",
-		//"scan_bg_image",
-		//"scan_desc",
-		//"scan_desc_icon",
-		//"scan_detect_succ_icon",
-		//"double_button_switch",
-		//"left_button_name",
-		//"right_button_name",
-		//"left_button_page_id",
-		//"right_button_page_id",
-		//"end_cover_spec",
-		//"mask_cover_spec",
-		"wechat_finder_head_spec",
-		"wechat_finder_avatar_url_list",
+//simpleType imageId
+func PrintSimpleTypeImageID() {
+	specMap := map[string]string{
+		//"wechat_finder_avatar_url_list": "视频号外显头像url",
+		//"end_cover_desc":                "结束页描述",
+		//"end_cover_title":               "结束页标题",
+		//
+		//"mask_cover_ambient_video_url": "视频氛围图url",
+		//"mask_cover_ambient_end_url":   "结束页氛围图url",
+		//"scan_bg_image":                "扫一扫背景图url",
+		//"scan_desc":                    "扫一扫描述",
+		//"scan_desc_icon":               "扫一扫特定icon",
+		//"scan_detect_succ_icon":        "扫一扫成功显示icon",
+		//"left_button_name":             "左按钮文案",
+		//"right_button_name":            "右按钮文案",
+		//"left_button_page_id":          "左按钮page_id",
+		//"right_button_page_id":         "右按钮page_id",
+		"end_cover_image_id":              "结束页图片",
+		"mask_cover_ambient_video_img_id": "视频氛围图",
+		"mask_cover_ambient_end_img_id":   "结束页氛围图",
+		"scan_bg_image_id":                "扫一扫背景图",
+		"scan_desc_icon_img_id":           "扫一扫特定icon",
+		"scan_detect_succ_icon_img_id":    "扫一扫成功显示icon",
+		"sprite_image_id":                 "长按动画图片",
+		"wechat_finder_avatar_img_list":   "视频号外显头像",
+		"info_bar_head_image_id":          "信息栏头像账户",
 	}
 
-	PrintElement(srcStr)
-	PrintEnum(srcStr)
-	PrintComplexType()
-	PrintSimpleTypeBool()
+	for key, val := range specMap {
+		templateStr := "<simpleType name=\"" + key + "\" extends=\"string\">\n" +
+			"	<attribute name=\"max_length\" type=\"integer\" value=\"64\" />\n" +
+			"	<attribute name=\"min_length\" type=\"integer\" value=\"0\" />\n" +
+			"	<attribute name=\"description\" type=\"string\" value=\"" + val + "id\" />\n" +
+			"	<attribute name=\"restraint\" type=\"string\" value=\"" + val + "id\" />\n" +
+			"	<attribute name=\"errormsg\" type=\"string\" value=\"" + val + "id不正确\" />\n" +
+			"	<restriction>\n" +
+			"	<validate type=\"string\">\n" + "		<maxLength value=\"@max_length\" />\n" +
+			"		<minLength value=\"@min_length\" />\n" +
+			"	</validate>" +
+			"\n	</restriction>\n</simpleType>"
+		fmt.Println(templateStr)
+	}
+}
+
+func main() {
+	//srcStr := []string{
+	//	"end_cover_image_id",
+	//	"mask_cover_ambient_video_img_id",
+	//	"mask_cover_ambient_end_img_id",
+	//	"scan_bg_image_id",
+	//	"scan_desc_icon_img_id",
+	//	"scan_detect_succ_icon_img_id",
+	//	"sprite_image_id",
+	//	"wechat_finder_avatar_img_list",
+	//	"info_bar_head_image_id",
+	//	//"wechat_finder_head_spec",
+	//	//"wechat_finder_avatar_url_list",
+	//}
+
+	//PrintElement(srcStr)
+	//PrintEnum(srcStr)
+	//PrintComplexType()
+	//PrintSimpleTypeBool()
 	//PrintSimpleTypeEnum()
-	PrintSimpleTypeString()
+	//PrintSimpleTypeString()
+	PrintSimpleTypeImageID()
 }
 
 /**

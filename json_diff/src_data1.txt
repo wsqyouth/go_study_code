@@ -1,0 +1,63 @@
+<option name="PAGE_TYPE_DEFAULT" value="0" desc="默认落地页类型。推广普通外链/电商推广/微信品牌页时，默认落地页类型代表跳转到广告主自定义的url。推广安卓App时，默认落地页类型代表跳转到应用宝下载页。推广IOS App时，默认落地页类型代表跳转到苹果App Store下载页。推广微信门店时，默认落地页类型代表跳转到微信门店页。"/>
+		<option name="PAGE_TYPE_TSA_APP" value="1" desc="通过 TSA 落地页制作工具生成的自定义 APP 介绍页"/>
+
+		<option name="PAGE_TYPE_TSA_WEB_NONE_ECOMMERCE" value="4" desc="通过 TSA 落地页制作工具生成的非电商类网页"/>
+
+		<option name="PAGE_TYPE_CANVAS_WECHAT" value="12" desc="微信原生推广页，通过微信创建的落地页类型"/>
+
+		<option name="PAGE_TYPE_MINI_PROGRAM_WECHAT" value="9999" desc="微信小程序落地页"/>
+
+		<option name="PAGE_TYPE_FENGYE_ECOMMERCE" value="7" desc="通过枫叶落地页制作工具生成的电商类网页"/>
+
+		<option name="PAGE_TYPE_FENGYE_EC_WECHAT_MINIPROGRAM" value="10005" desc="枫页电商小程序页" />
+
+		<option name="PAGE_TYPE_IOS_APP" value="2" desc="IOS默认下载页"/>
+
+		<option name="PAGE_TYPE_MINI_GAME_WECHAT" value="9998" desc="微信小游戏落地页"/>
+
+		<option name="PAGE_TYPE_MINI_PROGRAM_QQ" value="9997" desc="QQ小程序落地页"/>
+
+		<option name="PAGE_TYPE_MINI_PROGRAM_CANVAS_WECHAT" value="9996" desc="微信小程序原生页"/>
+
+		<option name="PAGE_TYPE_MINI_GAME_QQ" value="9990" desc="QQ小游戏落地页"/>
+
+		<option name="PAGE_TYPE_ARTICAL_WECHAT" value="9995" desc="微信文章页" />
+
+		<option name="PAGE_TYPE_MOMENTS_SIMPLE_NATIVE_WECHAT" value="40008" desc="微信简版原生页"/>
+
+		<option name="PAGE_TYPE_FULL_SCREEN_WECHAT" value="40009" desc="微信素材放大(待废弃,仅支持微信小游戏下使用)"/>
+
+		<option name="PAGE_TYPE_WECHAT_CHANNELS" value="60003" desc="视频号视频详情页"/>
+
+		<option name="PAGE_TYPE_YUEBAO_QUICKAPP" value="16004" desc="阅宝快应用"/>
+
+		<option name="PAGE_TYPE_YUEBAO_OFFICIAL_ACCOUNT_ARTICLE" value="16005" desc="阅宝公众号(H5页, 点击唤起应用)"/>
+
+		<option name="PAGE_TYPE_CHANNELS_WATCH_LIVE" value="60005" desc="视频号观看直播"/>
+
+		<option name="PAGE_TYPE_CHANNELS_RESERVE_LIVE" value="60006" desc="视频号预约直播"/>
+
+
+		<option name="PAGE_TYPE_YOUZAN_SINGLE" value="20001" desc="有赞单品页" hidden="yes"/>
+
+		<option name="PAGE_TYPE_YOUZAN_TOGETHER" value="20002" desc="有赞聚合页" hidden="yes"/>
+
+		<option name="PAGE_TYPE_YOUZAN_WECHAT_MINIPROGRAM" value="20003" desc="有赞微信小程序页" hidden="yes"/>
+
+		<option name="PAGE_TYPE_YIYE_FORM" value="20101" desc="一叶智能落地页" hidden="yes"/>
+
+		<option name="PAGE_TYPE_WEIMOB_PRODUCTSET" value="20301" desc="微盟聚合页" />
+
+		<option name="PAGE_TYPE_WEIMOB_PROMOTION" value="20302" desc="微盟活动页" />
+
+		<option name="PAGE_TYPE_WEIMOB_PRODUCT" value="20303" desc="微盟单品页" />
+
+		<option name="PAGE_TYPE_WEIMOB_H5" value="20304" desc="微盟H5落地页" />
+
+		<option name="PAGE_TYPE_WEIMOB_WECHAT_MINIPROGRAM" value="20305" desc="微盟微信小程序页" />
+
+		<option name="PAGE_TYPE_TSA_OTT" value="20401" desc="蹊径OTT落地页" />
+
+		<option name="PAGE_TYPE_WECHAT_OFFICIAL_ACCOUNT_DETAIL" value="40005" desc=" 微信公众号详情页" hidden="yes"/>
+
+		<option name="PAGE_TYPE_XIJING_QUICK" value="16006" desc="蹊径极速版落地页"/>

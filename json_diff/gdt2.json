@@ -1,0 +1,54 @@
+{
+  "support_link_name_type": {
+    "list": [
+      {
+        "link_name_type": "MORE_INFO",
+        "description": "了解更多"
+      },
+      {
+        "link_name_type": "DOWNLOAD_NOW",
+        "description": "立即下载"
+      },
+      {
+        "link_name_type": "GET_IT_NOW",
+        "description": "立即领取"
+      },
+      {
+        "link_name_type": "TRY_PLAY_NOW",
+        "description": "立即试玩"
+      },
+      {
+        "link_name_type": "TRY_NOW",
+        "description": "立即体验"
+      },
+      {
+        "link_name_type": "BUY_ASAP",
+        "description": "立即抢购"
+      },
+      {
+        "link_name_type": "SETUP_NOW",
+        "description": "立即开通"
+      },
+      {
+        "link_name_type": "SECKILL_NOW",
+        "description": "立即秒杀"
+      },
+      {
+        "link_name_type": "DOWNLOAD_APP",
+        "description": "下载应用"
+      },
+      {
+        "link_name_type": "DOWNLOAD_GAME",
+        "description": "下载游戏"
+      },
+      {
+        "link_name_type": "INSTALL_NOW",
+        "description": "立即安装"
+      },
+      {
+        "link_name_type": "RESERVE_NOW",
+        "description": "立即预约"
+      }
+    ]
+  }
+}
