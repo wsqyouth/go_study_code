@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-	stringValue := "严苛成品样板·艺术体验中心·景观示范区，全维实景敬呈，恭迎品鉴"
+	stringValue := "外层文案外层文案外层文案外层文案外层文案外层文案外层文案外" //30字
 	stringValueNew := "··，，"
 	// minLen := 1
 	// maxLen := 30
