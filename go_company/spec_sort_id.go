@@ -9,9 +9,9 @@ func main() {
 
 	var resultJSON = []byte(`{"results":[
 		 {
-            "id": 1000750,
+            "id": 10013,
             "sort_id": 7,
-            "element_key": "info_bar_switch",
+            "element_key": "social_switch",
             "count": 1,
             "use": "optional",
             "discard": "",
@@ -19,9 +19,9 @@ func main() {
             "use_old": ""
         },
         {
-            "id": 10028,
+            "id": 1000011,
             "sort_id": 8,
-            "element_key": "info_bar_type",
+            "element_key": "social_cheer_text_type",
             "count": 1,
             "use": "optional",
             "discard": "",
@@ -29,9 +29,9 @@ func main() {
             "use_old": ""
         },
         {
-            "id": 1000885,
+            "id": 1000909,
             "sort_id": 9,
-            "element_key": "info_bar_title",
+            "element_key": "social_pag_animation_url",
             "count": 1,
             "use": "optional",
             "discard": "",
@@ -39,9 +39,9 @@ func main() {
             "use_old": ""
         },
         {
-            "id": 10016,
+            "id": 10040,
             "sort_id": 10,
-            "element_key": "info_bar_description",
+            "element_key": "social_pag_animation_md5",
             "count": 1,
             "use": "optional",
             "discard": "",
@@ -49,9 +49,9 @@ func main() {
             "use_old": ""
         },
         {
-            "id": 10026,
+            "id": 1000893,
             "sort_id": 11,
-            "element_key": "info_bar_head_description",
+            "element_key": "social_cheer_icon",
             "count": 1,
             "use": "optional",
             "discard": "",
@@ -59,9 +59,9 @@ func main() {
             "use_old": ""
         },
         {
-            "id": 20182,
+            "id": 1000894,
             "sort_id": 12,
-            "element_key": "info_bar_head_image_id",
+            "element_key": "social_cheer_icon_dark",
             "count": 1,
             "use": "optional",
             "discard": "",
@@ -71,7 +71,7 @@ func main() {
 	]}`)
 	var specResult SpecResult
 	_ = json.Unmarshal(resultJSON, &specResult)
-	start := 9
+	start := 30
 	for i := 0; i < len(specResult.Results); i++ {
 		specResult.Results[i].SortId = start
 		start = start + 1
@@ -84,13 +84,16 @@ func main() {
 
 type SpecResult struct {
 	Results []struct {
-		Id         int    `json:"id" `
-		SortId     int    `json:"sort_id"`
-		ElementKey string `json:"element_key"`
-		Count      int    `json:"count"`
-		Use        string `json:"use"`
-		Discard    string `json:"discard"`
-		OriginId   int    `json:"origin_id"`
-		UseOld     string `json:"use_old"`
+		Id                  int    `json:"id" `
+		SortId              int    `json:"sort_id"`
+		ElementKey          string `json:"element_key"`
+		Count               int    `json:"count"`
+		Use                 string `json:"use"`
+		Discard             string `json:"discard"`
+		OriginId            int    `json:"origin_id"`
+		UseOld              string `json:"use_old"`
+		MinCount            int    `json:"min_count"`
+		MaxCount            int    `json:"max_count"`
+		SupportDynamicCount string `json:"support_dynamic_count"`
 	}
 }

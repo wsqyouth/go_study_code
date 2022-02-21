@@ -14,5 +14,6 @@ func main() {
 			avatarImgUrlList)
 		return
 	}
+	fmt.Println((avatarBytes))
 	fmt.Println(string(avatarBytes))
 }

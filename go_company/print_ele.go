@@ -111,38 +111,32 @@ func PrintSimpleTypeString() {
 
 func main() {
 	srcStr := []string{
-		"end_cover_switch",
-		"end_cover_type",
-		"end_cover_image_url",
-		"end_cover_desc",
-		"end_cover_title",
-		"end_cover_action_title",
-		"mask_cover_switch",
-		"mask_cover_type",
-		"mask_cover_ambient_video_url",
-		"mask_cover_ambient_end_url",
-		"scan_switch",
-		"scan_bg_image",
-		"scan_desc",
-		"scan_desc_icon",
-		"scan_detect_succ_icon",
-		"double_button_switch",
-		"left_button_name",
-		"right_button_name",
-		"left_button_page_id",
-		"right_button_page_id",
-		"end_cover_spec",
-		"mask_cover_spec",
-		"scan_spec",
-		"double_button_page_spec",
+		"playing_game_switch",
+		"playing_game_appid",
+		"subscript_switch",
+		"subscript_outside_title_en",
+		"subscript_outside_title_tw",
+		"subscript_outside_title_zh",
+		"subscript_inside_title_en",
+		"subscript_inside_title_tw",
+		"subscript_inside_title_zh",
+		"interaction_switch",
+		"interaction_rolling_list",
+		"interaction_label_type",
+		"social_switch",
+		"social_cheer_text_type",
+		"social_pag_animation_url",
+		"social_pag_animation_md5",
+		"social_cheer_icon",
+		"social_cheer_icon_dark",
 	}
 
-	//PrintElement(srcStr)
-	PrintEnum(srcStr)
-	PrintComplexType()
-	PrintSimpleTypeBool()
-	PrintSimpleTypeEnum()
-	PrintSimpleTypeString()
+	PrintElement(srcStr)
+	//PrintEnum(srcStr)
+	//PrintComplexType()
+	//PrintSimpleTypeBool()
+	//PrintSimpleTypeEnum()
+	//PrintSimpleTypeString()
 }
 
 /**
