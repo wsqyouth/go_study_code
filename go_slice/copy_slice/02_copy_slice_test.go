@@ -3,21 +3,28 @@ package main
 
 import "testing"
 
-func BenchmarkCopyArr(b *testing.B) {
-	var arr []int64 //输入数据集
-	for i := 0; i < 10; i++ {
+//输入数据集
+func generateWithCap(n int) []int64 {
+	var arr []int64
+	for i := 0; i < n; i++ {
 		arr = append(arr, int64(i))
 	}
+	return arr
+}
+
+func BenchmarkCopyArr(b *testing.B) {
+	b.StopTimer()
+	nums := generateWithCap(10000)
+	b.StartTimer() //不计入耗时
 	for n := 0; n < b.N; n++ {
-		copyArr(arr)
+		copyArr(nums)
 	}
 }
 func BenchmarkCopyArrNew(b *testing.B) {
-	var arr []int64 //输入数据集
-	for i := 0; i < 10; i++ {
-		arr = append(arr, int64(i))
-	}
+	b.StopTimer()
+	nums := generateWithCap(10000)
+	b.StartTimer() //不计入耗时
 	for n := 0; n < b.N; n++ {
-		copyArrNew(arr)
+		copyArrNew(nums)
 	}
 }
