@@ -9,6 +9,8 @@ func main() {
 
 	fmt.Println(removeDuplicateElement(s))
 	fmt.Println(removeDuplicateString(s))
+	fmt.Println(removeDuplicateStringNew(s))
+	fmt.Println(removeDuplicateStringNew([]string{}))
 }
 
 func removeDuplicateElement(arr []string) []string {
@@ -35,6 +37,18 @@ func removeDuplicateString(strList []string) []string {
 		}
 		strMap[str] = true
 		duplicateStrList = append(duplicateStrList, str)
+	}
+	return duplicateStrList
+}
+
+func removeDuplicateStringNew(strList []string) []string {
+	duplicateStrList := make([]string, 0, len(strList))
+	tempMap := map[string]struct{}{}
+	for _, str := range strList {
+		if _, ok := tempMap[str]; !ok {
+			tempMap[str] = struct{}{}
+			duplicateStrList = append(duplicateStrList, str)
+		}
 	}
 	return duplicateStrList
 }
