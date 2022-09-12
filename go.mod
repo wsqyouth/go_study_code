@@ -16,6 +16,7 @@ require (
 	github.com/json-iterator/go v1.1.12
 	github.com/onsi/ginkgo v1.16.4 // indirect
 	github.com/onsi/gomega v1.13.0 // indirect
+	github.com/pkg/errors v0.9.1
 	github.com/wsqyouth/goinaction_code v0.0.0-20171020164608-49fc99e6affb
 	golang.org/x/net v0.0.0-20210428140749-89ef3d95e781
 	golang.org/x/sync v0.0.0-20201020160332-67f06af15bc9

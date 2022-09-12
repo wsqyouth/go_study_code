@@ -21,7 +21,9 @@ func callFoo(f Foo) {
 	f.foo()
 }
 
+/*
 func main() {
 	var a A
 	callFoo(a)
 }
+*/
