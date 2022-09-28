@@ -3,8 +3,8 @@ module github.com/wsqyouth/coopers_go_code
 go 1.16
 
 require (
-	github.com/DATA-DOG/go-sqlmock v1.5.0 // indirect
-	github.com/agiledragon/gomonkey v2.0.2+incompatible // indirect
+	github.com/DATA-DOG/go-sqlmock v1.5.0
+	github.com/agiledragon/gomonkey v2.0.2+incompatible
 	github.com/apache/pulsar-client-go v0.5.0
 	github.com/deckarep/golang-set v1.7.1
 	github.com/go-redis/redis/v7 v7.4.0
@@ -19,6 +19,7 @@ require (
 	github.com/onsi/ginkgo v1.16.4 // indirect
 	github.com/onsi/gomega v1.13.0 // indirect
 	github.com/pkg/errors v0.9.1
+	github.com/stretchr/testify v1.5.1
 	github.com/wsqyouth/goinaction_code v0.0.0-20171020164608-49fc99e6affb
 	golang.org/x/net v0.0.0-20210428140749-89ef3d95e781
 	golang.org/x/sync v0.0.0-20201020160332-67f06af15bc9
