@@ -10,13 +10,12 @@ type HandleFunc func()
 
 func (c Chain) Handle(handler HandleFunc) {
 	for i := len(c) - 1; i >= 0; i-- {
-		fmt.Println(i)
-		curFilter, curHandler := c[i], handler
+		curFilter, curHandler := c[i], handler //核心: 通过hander从后往前构造next指针
 		handler = func() {
 			curFilter(curHandler)
 		}
 	}
-	handler()
+	handler() //核心:调用时会类似递归从前往后调用next函数，然后逆序返回
 }
 
 func filter1(next HandleFunc) {
