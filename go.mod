@@ -28,6 +28,7 @@ require (
 	golang.org/x/time v0.0.0-20210611083556-38a9dc6acbc6
 	google.golang.org/appengine v1.6.1 // indirect
 	google.golang.org/protobuf v1.27.1 // indirect
+	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
 
 replace github.com/codegangsta/cli => github.com/urfave/cli v1.22.5
