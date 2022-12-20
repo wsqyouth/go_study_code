@@ -17,12 +17,14 @@ require (
 	github.com/hibiken/asynq v0.18.1
 	github.com/jinzhu/copier v0.3.2
 	github.com/json-iterator/go v1.1.12
+	github.com/natefinch/lumberjack v2.0.0+incompatible // indirect
 	github.com/pkg/errors v0.9.1
-	github.com/stretchr/testify v1.5.1
+	github.com/stretchr/testify v1.8.0
 	github.com/thoas/go-funk v0.9.2 // indirect
 	github.com/wsqyouth/goinaction_code v0.0.0-20171020164608-49fc99e6affb
+	go.uber.org/zap v1.24.0 // indirect
 	golang.org/x/net v0.0.0-20210428140749-89ef3d95e781
-	golang.org/x/sync v0.0.0-20201020160332-67f06af15bc9
+	golang.org/x/sync v0.0.0-20210220032951-036812b2e83c
 	golang.org/x/time v0.0.0-20210611083556-38a9dc6acbc6
 	google.golang.org/appengine v1.6.1 // indirect
 	google.golang.org/protobuf v1.27.1 // indirect
