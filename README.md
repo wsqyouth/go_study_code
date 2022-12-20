@@ -1,5 +1,5 @@
-### study on 2021
-this is my person git project.
+### study since 2021
+this is coopers  person git project.
 
 ### 目录结构
 针对go基础库的使用,参考目录结构:
