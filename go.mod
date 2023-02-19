@@ -19,6 +19,7 @@ require (
 	github.com/json-iterator/go v1.1.12
 	github.com/natefinch/lumberjack v2.0.0+incompatible // indirect
 	github.com/pkg/errors v0.9.1
+	github.com/spf13/cobra v0.0.3 // indirect
 	github.com/stretchr/testify v1.8.0
 	github.com/thoas/go-funk v0.9.2 // indirect
 	github.com/wsqyouth/goinaction_code v0.0.0-20171020164608-49fc99e6affb
