@@ -6,6 +6,6 @@ import (
 )
 
 func main() {
-	fmt.Println("nvim-go")
+	fmt.Println("nvim-go,hanwei")
 	time.Sleep(time.Second)
 }

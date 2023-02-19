@@ -23,4 +23,4 @@ xxx_study:
 * test：增加测试
 * chore：构建过程或辅助工具的变动
 
-### I am still learning, and I may say things out of ignorance
+### I am still learning, and I may say things out of ignorance!
