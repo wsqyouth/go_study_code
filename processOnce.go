@@ -29,6 +29,7 @@ func main() {
 	}
 }
 
+// processObj 处理对象
 func processObj(ctx context.Context, obj ProcessObj) error {
 	onceObj, ok := getOnceObj(ctx)
 	if ok && !onceObj.SetNxObj(ctx, obj) {
@@ -45,9 +46,12 @@ const (
 	OnceObjTypeKey OnceObjType = 1
 )
 
+// initOnceObj 初始化ctx key
 func initOnceObj(ctx context.Context) context.Context {
 	return context.WithValue(ctx, OnceObjTypeKey, new(OnceObj))
 }
+
+// getOnceObj 从ctx获取key
 func getOnceObj(ctx context.Context) (*OnceObj, bool) {
 	obj, ok := ctx.Value(OnceObjTypeKey).(*OnceObj)
 	return obj, ok
