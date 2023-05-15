@@ -1,0 +1,3 @@
+app:
+  run_mode: debug                 # gin 开发模式, debug, release, test
+  addr: :8080                     # HTTP绑定端口
