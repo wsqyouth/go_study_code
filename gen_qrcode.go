@@ -39,11 +39,10 @@ func main() {
 	ssoUrl := "https://sso.e.qq.com/login?" + ssoParams.Encode()
 	fmt.Println("h5Url: ", h5Url)
 	fmt.Println("ssoUrl: ", ssoUrl)
-	refUrl := "https://sso.e.qq.com/login?service_tag=61&sso_redirect_uri=https%3A%2F%2Fad.qq.com%2Fatlas%2Fh5_super_preview%3Fqrcode_key%3Dd2fdb28c0a60d50a582c4fc9517c0457%26advertiser_id%3D20458%26adgroup_id%3D4122935097"
-	fmt.Println("is equal:", ssoUrl == refUrl)
 	// generateQR("gdt.png", url)
 }
 
+// generateQR 将对应的内容生成的文件里, 也可以将其放到字节流里
 func generateQR(fileName string, url string) {
 	qrCode, _ := qrcode.New(url, qrcode.Medium)
 	err := qrCode.WriteFile(256, fileName)
