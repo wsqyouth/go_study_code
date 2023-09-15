@@ -38,7 +38,7 @@ type ZapLogger struct {
 }
 
 func (l *ZapLogger) Info(args ...interface{}) {
-	l.Sugar().Infow("", "msg:", fmt.Sprint(args...))
+	l.Sugar().Infow("", "Info msg:", fmt.Sprint(args...))
 }
 
 // WithLogger 通过键区分调用者和被调用者的日志记录器
