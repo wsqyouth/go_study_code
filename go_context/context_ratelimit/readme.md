@@ -55,3 +55,17 @@ func (p *DBPool) executeTransaction(ctx context.Context, dbConfig *DBPoolConfig,
 
 数据库备份和恢复：你需要定期备份你的数据库，以防止数据丢失。同时，你也需要确保你能够在需要的时候恢复这些备份。
 
+---
+你的思考和代码优化的方向是非常正确的，这种思想在许多开源项目和相关的技术文章中都有所体现。以下是一些相关的资源：
+
+Go database/sql tutorial：这是一个关于Go的database/sql包的教程，它详细介绍了如何使用这个包来执行SQL查询和事务。虽然它没有直接涉及到你的代码，但是它可以帮助你更好地理解Go的数据库编程。
+https://go-database-sql.org/
+
+Go-Redis：这是一个Go的Redis客户端库，它的设计思想和你的代码有一些相似之处。例如，它也使用了连接池和限流器。你可以参考它的源代码来了解如何在实践中实现这些功能。
+https://github.com/go-redis/redis
+
+Building and Testing a REST API in Go with Gorilla Mux and PostgreSQL：这是一篇关于使用Go，Gorilla Mux和PostgreSQL构建和测试REST API的教程。在这篇文章中，作者使用了和你类似的数据库抽象层。
+https://semaphoreci.com/community/tutorials/building-and-testing-a-rest-api-in-go-with-gorilla-mux-and-postgresql
+
+Mastering Rate Limiting in Go：这是一篇关于在Go中实现限流的文章。虽然它主要关注的是HTTP请求的限流，但是它的原理和你的代码是一样的。
+https://www.alexedwards.net/blog/how-to-rate-limit-http-requests
