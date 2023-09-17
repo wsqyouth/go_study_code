@@ -3,7 +3,9 @@ package main
 import (
 	"context"
 	"database/sql"
+	"errors"
 	"fmt"
+	"log"
 	"sync"
 	"time"
 
@@ -12,25 +14,22 @@ import (
 )
 
 func main() {
-	ctx := context.Background()
-	query := "SELECT name,age FROM user limit 3"
-	dbConfig := getDBConfig(ctx, query)
-	ctx = setContexRateLimit(ctx, RateLimitKey{dbConfig.key})
-	dbPool := NewDBPool()
-	var wg sync.WaitGroup
-	for i := 0; i < 10; i++ {
-		wg.Add(1)
-		go func(i int) {
-			defer wg.Done()
-			err := dbPool.Select(ctx, dbConfig, query)
-			if err != nil {
-				fmt.Println("Error:", err)
-				return
-			}
-			fmt.Println("Query executed success. num:", i)
-		}(i)
+	// 创建一个新的DBPool
+	dbPool, err := NewDBPool("user:password@/dbname")
+	if err != nil {
+		log.Fatalf("Failed to create DBPool: %v", err)
 	}
-	wg.Wait()
+	// 创建一个新的SessionPool
+	sessionPool := NewSessionPool(dbPool)
+	// 非事务操作
+	session.Select("SELECT * FROM users", handler)
+	// 开始一个新的事务
+	session.Begin()
+	// 事务操作
+	session.Insert("INSERT INTO users (name) VALUES (?)", "Alice")
+	session.Update("UPDATE users SET age = ? WHERE name = ?", 25, "Alice")
+	// 提交事务
+	session.Commit()
 }
 
 type key int
@@ -63,7 +62,7 @@ type DBPoolConfig struct {
 	source string
 }
 
-// 启动时将整个数据库配置放到ctx里,这里根据请求确定具体的key和对应的账号密码
+// 根据请求确定key和对应的账号密码
 func getDBConfig(ctx context.Context, query string) *DBPoolConfig {
 	fmt.Println(query)
 	return &DBPoolConfig{
@@ -176,13 +175,104 @@ func getContextRateLimit(ctx context.Context) (limitKey RateLimitKey, ok bool) {
 	return
 }
 
-/*
-总结：
-功能实现分为三个阶段：
-1. 通过conext val实现对某数据源的限频操作注入,完成基于context val的读写操作
-2. 添加限频器,当ctx要求对数据源限频时实现qps=1的限频
-3. 使用waitGroup进行并发测试，检查限频功能是否生效
-4. 并发场景下，对dbpool中map的读写需要考虑锁的场景,添加读写锁
-5. 抽象提取dbConfig,利用key实现对某个数据库实例进行限频,利用source存储对应数据库的账号密码
-6. 抽象executeQuery,封装出CRUD,方便使用者调用
-*/
+type Session struct {
+	db *sql.DB
+	tx *sql.Tx
+}
+
+func (s *Session) Begin() error {
+	var err error
+	s.tx, err = s.db.Begin()
+	return err
+}
+
+func (s *Session) Commit() error {
+	if s.tx == nil {
+		return errors.New("no transaction started")
+	}
+	err := s.tx.Commit()
+	s.tx = nil // reset transaction after commit
+	return err
+}
+
+func (s *Session) Rollback() error {
+	if s.tx == nil {
+		return errors.New("no transaction started")
+	}
+	err := s.tx.Rollback()
+	s.tx = nil // reset transaction after rollback
+	return err
+}
+
+func (s *Session) executeQuery(query string, handler RowHandler) error {
+	var rows *sql.Rows
+	var err error
+
+	if s.tx != nil {
+		rows, err = s.tx.Query(query)
+	} else {
+		rows, err = s.db.Query(query)
+	}
+
+	if err != nil {
+		return err
+	}
+	defer rows.Close()
+
+	if handler != nil {
+		if err := handler(rows); err != nil {
+			return err
+		}
+	}
+
+	if err := rows.Err(); err != nil {
+		return err
+	}
+	return nil
+}
+
+func (s *Session) Insert(query string, args ...interface{}) error {
+	return s.executeQuery(query, nil)
+}
+
+func (s *Session) Update(query string, args ...interface{}) error {
+	return s.executeQuery(query, nil)
+}
+
+func (s *Session) Delete(query string, args ...interface{}) error {
+	return s.executeQuery(query, nil)
+}
+
+func (s *Session) Select(query string, handler RowHandler) error {
+	return s.executeQuery(query, handler)
+}
+
+type SessionPool struct {
+	dbPool   *DBPool
+	sessions map[string]*Session
+}
+
+func NewSessionPool(dbPool *DBPool) *SessionPool {
+	return &SessionPool{
+		dbPool:   dbPool,
+		sessions: make(map[string]*Session),
+	}
+}
+
+func (p *SessionPool) GetSession(sessionID string) (*Session, error) {
+	session, ok := p.sessions[sessionID]
+	if ok {
+		return session, nil
+	}
+
+	db := p.dbPool.pool
+	session = &Session{db: db}
+	p.sessions[sessionID] = session
+	return session, nil
+}
+
+func (p *SessionPool) ReleaseSession(sessionID string) {
+	delete(p.sessions, sessionID)
+}
+
+// DBPool管理数据库连接，SessionPool管理Session，并通过DBPool获取数据库连接。每个Session都有一个唯一的sessionID，你可以通过这个sessionID从SessionPool中获取或释放Session。

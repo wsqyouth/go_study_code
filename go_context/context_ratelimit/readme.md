@@ -69,3 +69,8 @@ https://semaphoreci.com/community/tutorials/building-and-testing-a-rest-api-in-g
 
 Mastering Rate Limiting in Go：这是一篇关于在Go中实现限流的文章。虽然它主要关注的是HTTP请求的限流，但是它的原理和你的代码是一样的。
 https://www.alexedwards.net/blog/how-to-rate-limit-http-requests
+
+
+思考:
+1. 支持事务，事务的业务接口和非事务是独立的，此时如何针对事务id进行复用
+2. dbConfig里面添加连接数的设置，以更好的实现对数据库的配置化：连接池的设置，连接数，最大空闲连接数，最大活动连接数
