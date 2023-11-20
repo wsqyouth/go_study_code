@@ -79,3 +79,13 @@ func main() {
 	wg.Wait()
 	fmt.Printf("Final counter value: %d\n", counter)
 }
+
+/*
+要求: 分布式锁, 要求使用上下文、考虑超时处理、锁拥有者问题、加锁解锁操作，能够在工业业务场景中使用
+总结：
+这段代码创建了10个并发的goroutine，每个goroutine都尝试获取分布式锁并增加全局变量counter的值。
+通过使用sync.WaitGroup，我们可以确保所有goroutine在主函数退出之前完成执行。
+
+运行这个示例，你会看到每个goroutine都尝试获取锁并增加计数器。
+由于我们使用了分布式锁，所以在同一时间只有一个goroutine能够访问共享资源（即counter变量）。这样可以确保在并发环境下，共享资源的访问是安全的。
+*/
