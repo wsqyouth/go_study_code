@@ -20,3 +20,6 @@ curl http://localhost:8080/articles/1
 
 * 参考项目代码: https://github.com/bxcodec/go-clean-arch/blob/master/article/delivery/http/middleware/middleware.go
 
+
+另外一个项目的,存放测试下
+![Alt text](image.png)
