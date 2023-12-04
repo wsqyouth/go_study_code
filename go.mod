@@ -9,11 +9,13 @@ require (
 	github.com/deckarep/golang-set v1.7.1
 	github.com/go-redis/redis/v7 v7.4.0
 	github.com/go-redis/redis/v8 v8.11.5
+	github.com/go-redis/redis_rate/v8 v8.0.0 // indirect
+	github.com/go-redis/redis_rate/v9 v9.1.2 // indirect
 	github.com/go-sql-driver/mysql v1.7.1
 	github.com/goinaction/code v0.0.0-20171020164608-49fc99e6affb
 	github.com/golang/groupcache v0.0.0-20210331224755-41bb18bfe9da
 	github.com/golang/protobuf v1.5.2
-	github.com/google/go-cmp v0.5.5
+	github.com/google/go-cmp v0.5.6
 	github.com/google/uuid v1.3.0
 	github.com/hibiken/asynq v0.18.1
 	github.com/jinzhu/copier v0.3.2
