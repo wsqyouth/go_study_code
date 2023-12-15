@@ -78,4 +78,6 @@ func main() {
 
 最后，我们关闭了所有的channel，并使用errgroup.Group.Wait方法等待所有goroutine结束。如果任何goroutine在处理数据时返回了错误，Wait方法就会返回这个错误。
 
+待优化点：
+如果通道中的相同流水再次进入, 该如何做到可重入过滤: 使用map,lru等方式
 */
