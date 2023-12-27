@@ -9,7 +9,7 @@ import (
 )
 
 func main() {
-	processInput()
+	panicExample()
 	fmt.Println("hello")
 }
 
@@ -167,4 +167,27 @@ func processInput() {
 	close(ch) // 一定要放到wait之前
 	wg.Wait() // 正确的顺序是先关闭 channel，然后等待所有的 goroutine 结束。
 	fmt.Println("done")
+}
+
+// 问题5: 如何让chan进行panic
+func panicExample() {
+	defer func() {
+		if r := recover(); r != nil {
+			fmt.Println("panic recover: ", r)
+		}
+		fmt.Println("defer")
+	}()
+	// 场景1：关闭nil的chan会panic
+	//var ch chan int
+	//close(ch)
+
+	// 场景2: 关闭已经关闭的ch会panic
+	//ch2 := make(chan struct{})
+	//close(ch2)
+	//close(ch2)
+
+	// 场景3: 向一个关闭的ch写会panic
+	ch3 := make(chan struct{}, 5)
+	close(ch3)
+	ch3 <- struct{}{}
 }
