@@ -27,11 +27,6 @@ func main() {
 
 	r := gin.Default() // 已经包含了日志和恢复中间件
 
-	// r.Use(func(c *gin.Context) {
-	// 	start := time.Now()
-	// 	c.Next()
-	// 	log.Printf("-----%s %s %v", c.Request.Method, c.Request.URL, time.Since(start))
-	// })
 	r.Use(middleware.LoggingMiddleware())
 	r.GET("/articles/:id", func(c *gin.Context) {
 		id, _ := strconv.ParseInt(c.Param("id"), 10, 64)
