@@ -40,7 +40,7 @@ func (ss *SequenceService) getSequenceIDFromExternalService(step int64) (int64, 
 	// Get the current sequence ID and atomically update the global sequence ID
 	initSequenceID := atomic.LoadInt64(&globalSequenceID)
 	atomic.AddInt64(&globalSequenceID, step)
-	fmt.Println(initSequenceID, globalSequenceID)
+	// fmt.Println(initSequenceID, globalSequenceID)
 	// The new range will start from the current sequence ID and end at current sequence ID + step - 1
 	return initSequenceID, initSequenceID + step - 1, nil
 }
@@ -66,12 +66,16 @@ func (ss *SequenceService) updateSegmentInBackground(step int64) {
 			curSegment.maxID = maxID
 			curSegment.curID = minID // Start allocating from minID
 			curSegment.ready = true
+		} else {
+			// Set the current segment's ready flag to false so that it will be updated in the next iteration
+			curSegment.ready = false
 		}
 		ss.mutex.Unlock()
 	}
 }
 func (ss *SequenceService) getId() (int64, error) {
 	ss.mutex.Lock()
+	defer ss.mutex.Unlock() // Use defer to ensure mutex is always unlocked
 
 	var curSegment *Segment
 	if !ss.isSwapped {
@@ -83,7 +87,6 @@ func (ss *SequenceService) getId() (int64, error) {
 	if curSegment.curID <= curSegment.maxID {
 		id := curSegment.curID
 		curSegment.curID++
-		ss.mutex.Unlock()
 		return id, nil
 	}
 
@@ -95,26 +98,14 @@ func (ss *SequenceService) getId() (int64, error) {
 
 	if otherSegment.ready && otherSegment.curID <= otherSegment.maxID {
 		ss.isSwapped = !ss.isSwapped
+		curSegment.ready = false // Mark the current segment as not ready
 		id := otherSegment.curID
 		otherSegment.curID++
-		ss.mutex.Unlock()
 		return id, nil
 	}
 
-	// If the other segment is not ready, wait for it to become ready
-	ss.mutex.Unlock()
-	for {
-		time.Sleep(100 * time.Millisecond) // Wait a bit before trying again
-		ss.mutex.Lock()
-		if otherSegment.ready && otherSegment.curID <= otherSegment.maxID {
-			ss.isSwapped = !ss.isSwapped
-			id := otherSegment.curID
-			otherSegment.curID++
-			ss.mutex.Unlock()
-			return id, nil
-		}
-		ss.mutex.Unlock()
-	}
+	// If the other segment is not ready, return an error or wait for it to become ready
+	return 0, fmt.Errorf("no ID available, waiting for segment to become ready")
 }
 func main() {
 	ss := NewSequenceService(3000000000, 1000)
