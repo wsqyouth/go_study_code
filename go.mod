@@ -7,10 +7,11 @@ require (
 	github.com/agiledragon/gomonkey v2.0.2+incompatible
 	github.com/apache/pulsar-client-go v0.5.0
 	github.com/deckarep/golang-set v1.7.1
+	github.com/gammazero/workerpool v1.1.3
+	github.com/go-mysql-org/go-mysql v1.7.0
 	github.com/go-redis/redis/v7 v7.4.0
 	github.com/go-redis/redis/v8 v8.11.5
-	github.com/go-redis/redis_rate/v8 v8.0.0 // indirect
-	github.com/go-redis/redis_rate/v9 v9.1.2 // indirect
+	github.com/go-redis/redis_rate/v9 v9.1.2
 	github.com/go-sql-driver/mysql v1.7.1
 	github.com/goinaction/code v0.0.0-20171020164608-49fc99e6affb
 	github.com/golang/groupcache v0.0.0-20210331224755-41bb18bfe9da
@@ -22,6 +23,7 @@ require (
 	github.com/json-iterator/go v1.1.12
 	github.com/natefinch/lumberjack v2.0.0+incompatible
 	github.com/pkg/errors v0.9.1
+	github.com/satori/go.uuid v1.2.0
 	github.com/skip2/go-qrcode v0.0.0-20200617195104-da1b6568686e
 	github.com/spf13/cobra v0.0.3
 	github.com/stretchr/testify v1.8.0
