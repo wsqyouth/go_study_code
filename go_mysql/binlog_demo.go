@@ -44,20 +44,30 @@ func main() {
 	}
 }
 
-func handleEvent(ev *replication.BinlogEvent) error {
-	switch ev.Header.EventType {
+func handleEvent(e *replication.BinlogEvent) error {
+	ev := e.Event.(*replication.RowsEvent)
+	schema := string(ev.Table.Schema)
+	table := string(ev.Table.Table)
+
+	switch e.Header.EventType {
 	case replication.WRITE_ROWS_EVENTv2, replication.WRITE_ROWS_EVENTv1:
-		rowsEvent := ev.Event.(*replication.RowsEvent)
 		// 处理写入事件
-		fmt.Printf("WRITE_ROWS_EVENT: Schema: %s, Table: %s, Rows: %v\n", rowsEvent.Table.Schema, rowsEvent.Table.Table, rowsEvent.Rows)
+		fmt.Printf("WRITE_ROWS_EVENT: Schema: %s, Table: %s, Rows: %v\n", schema, table, ev.Rows)
 	case replication.DELETE_ROWS_EVENTv2, replication.DELETE_ROWS_EVENTv1:
-		rowsEvent := ev.Event.(*replication.RowsEvent)
 		// 处理删除事件
-		fmt.Printf("DELETE_ROWS_EVENT: Schema: %s, Table: %s, Rows: %v\n", rowsEvent.Table.Schema, rowsEvent.Table.Table, rowsEvent.Rows)
+		fmt.Printf("DELETE_ROWS_EVENT: Schema: %s, Table: %s, Rows: %v\n", schema, table, ev.Rows)
 	case replication.UPDATE_ROWS_EVENTv2, replication.UPDATE_ROWS_EVENTv1:
-		rowsEvent := ev.Event.(*replication.RowsEvent)
 		// 处理更新事件
-		fmt.Printf("UPDATE_ROWS_EVENT: Schema: %s, Table: %s, Rows: %v\n", rowsEvent.Table.Schema, rowsEvent.Table.Table, rowsEvent.Rows)
+		fmt.Printf("UPDATE_ROWS_EVENT: Schema: %s, Table: %s, Rows: %v\n", schema, table, ev.Rows)
 	}
+	fmt.Printf("\t\trows %v, header:%v\n", ev.Rows, e.Header)
+	for _, row := range ev.Rows {
+		for i, v := range row {
+			fmt.Printf("\t field[%d]=(%T)%v\n", i, v, v)
+		}
+	}
+
 	return nil
 }
+
+// https://cloud.tencent.com/developer/article/2329670?areaId=106001
