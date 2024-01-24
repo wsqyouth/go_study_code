@@ -37,4 +37,8 @@ func Go(ctx context.Context, f func()) {
 
 /*
 使用原始关键字go开启goroutine可能会有panic，因此需要对其封装，后续可以使用这个进行保护
+
+参考资料:
+[Defer, Panic, and Recover] https://go.dev/blog/defer-panic-and-recover
+[Go101 好资料] https://go101.org/article/panic-and-recover-more.html
 */
