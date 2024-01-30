@@ -6,6 +6,7 @@ require (
 	github.com/DATA-DOG/go-sqlmock v1.5.0
 	github.com/agiledragon/gomonkey v2.0.2+incompatible
 	github.com/apache/pulsar-client-go v0.5.0
+	github.com/bluele/gcache v0.0.2
 	github.com/deckarep/golang-set v1.7.1
 	github.com/gammazero/workerpool v1.1.3
 	github.com/go-mysql-org/go-mysql v1.7.0
@@ -23,7 +24,6 @@ require (
 	github.com/json-iterator/go v1.1.12
 	github.com/natefinch/lumberjack v2.0.0+incompatible
 	github.com/pkg/errors v0.9.1
-	github.com/satori/go.uuid v1.2.0
 	github.com/skip2/go-qrcode v0.0.0-20200617195104-da1b6568686e
 	github.com/spf13/cobra v0.0.3
 	github.com/stretchr/testify v1.8.0
