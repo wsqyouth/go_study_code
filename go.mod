@@ -21,6 +21,7 @@ require (
 	github.com/google/uuid v1.3.0
 	github.com/hibiken/asynq v0.18.1
 	github.com/jinzhu/copier v0.3.2
+	github.com/josephburnett/jd v1.7.1
 	github.com/json-iterator/go v1.1.12
 	github.com/natefinch/lumberjack v2.0.0+incompatible
 	github.com/pkg/errors v0.9.1
