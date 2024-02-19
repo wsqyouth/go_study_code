@@ -33,11 +33,12 @@ require (
 	github.com/thoas/go-funk v0.9.2
 	github.com/wsqyouth/goinaction_code v0.0.0-20171020164608-49fc99e6affb
 	go.uber.org/zap v1.24.0
-	golang.org/x/net v0.0.0-20210428140749-89ef3d95e781
-	golang.org/x/sync v0.0.0-20210220032951-036812b2e83c
+	golang.org/x/net v0.20.0
+	golang.org/x/oauth2 v0.0.0-20210218202405-ba52d332ba99 // indirect
+	golang.org/x/sync v0.3.0
 	golang.org/x/time v0.0.0-20210611083556-38a9dc6acbc6
-	google.golang.org/appengine v1.6.1 // indirect
-	google.golang.org/protobuf v1.27.1 // indirect
+	google.golang.org/appengine v1.6.7 // indirect
+	google.golang.org/protobuf v1.32.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1
 )
 
