@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+
+option go_package = ".;main";
+
+message MyMessage {
+  string StringField = 1;
+  bool BoolField = 2;
+  int32 Int32Field = 3;
+  google.protobuf.Timestamp TimestampField = 4;
+}
