@@ -11,3 +11,6 @@ curl -X POST -H "Content-Type: application/json" -d '{"ID": 1, "UserID": 1, "Tit
 ```
 curl -X GET "http://localhost:8080/miniblog?userID=1"
 ```
+
+### 架构
+![Alt text](image.png)
