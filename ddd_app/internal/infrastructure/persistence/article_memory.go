@@ -1,10 +1,10 @@
 package persistence
 
 import (
-	"fmt"
 	"context"
 	"ddd_app/internal/domain/entity"
 	"ddd_app/internal/domain/repo"
+	"fmt"
 )
 
 type ArticleMapRepo struct {
@@ -19,12 +19,12 @@ func NewArticleMapRepo() repo.ArticleRepo {
 
 func (r *ArticleMapRepo) Save(ctx context.Context, article entity.Article) error {
 	r.storage[article.UserID] = append(r.storage[article.UserID], article)
-	fmt.Println("map save:",r.storage)
+	fmt.Println("map save:", r.storage)
 	return nil
 }
 
 func (r *ArticleMapRepo) GetArticlesByUserID(ctx context.Context, userID int) ([]entity.Article, error) {
-	fmt.Println("map has:",r.storage)
+	fmt.Println("map has:", r.storage)
 	if articles, ok := r.storage[userID]; ok {
 		return articles, nil
 	}

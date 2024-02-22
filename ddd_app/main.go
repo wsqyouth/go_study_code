@@ -2,25 +2,29 @@
 package main
 
 import (
-	"fmt"
-	"encoding/json"
-	"net/http"
 	"ddd_app/internal/api"
 	"ddd_app/internal/application"
 	"ddd_app/internal/infrastructure/persistence"
+	"encoding/json"
+	"fmt"
+	"net/http"
+
+	// 引入providers
+	_ "ddd_app/internal/providers"
 )
 
 func main() {
 	fmt.Println("app running")
 	articleRepo := persistence.NewArticleMapRepo()
-	articleService := application.NewArticleService(articleRepo)
-	articleHandler := api.NewArticleHandler(articleService)
+	UserRepo := persistence.NewUserInfoRepo()
+	blogService := application.NewBlogService(articleRepo, UserRepo)
+	blogHandler := api.NewBlogHandler(blogService)
 
-	http.HandleFunc("/articles", func(w http.ResponseWriter, r *http.Request) {
+	http.HandleFunc("/miniblog", func(w http.ResponseWriter, r *http.Request) {
 		switch r.Method {
 		case http.MethodPost:
 			fmt.Println("app post")
-			status, err := articleHandler.WriteArticle(r)
+			status, err := blogHandler.WriteArticle(r)
 			if err != nil {
 				http.Error(w, err.Error(), status)
 				return
@@ -29,7 +33,7 @@ func main() {
 			w.Write([]byte("Article created successfully"))
 		case http.MethodGet:
 			fmt.Println("app get")
-			articles, status, err := articleHandler.GetArticlesByUserID(r)
+			articles, status, err := blogHandler.GetArticlesByUserID(r)
 			if err != nil {
 				http.Error(w, err.Error(), status)
 				return
