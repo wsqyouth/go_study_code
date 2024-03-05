@@ -1,3 +1,8 @@
+### 零、环境检查：
+```
+chmod +x init_env.sh
+./init_env.sh
+```
 ### 一、deploy.sh 职责
 只负责编译和运行deploy.go脚本
 ### 二、deploy.go将处理以下任务：
