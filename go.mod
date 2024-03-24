@@ -7,6 +7,7 @@ require (
 	github.com/agiledragon/gomonkey v2.0.2+incompatible
 	github.com/apache/pulsar-client-go v0.5.0
 	github.com/bluele/gcache v0.0.2
+	github.com/blues/jsonata-go v1.5.4
 	github.com/deckarep/golang-set v1.7.1
 	github.com/gammazero/workerpool v1.1.3
 	github.com/go-mysql-org/go-mysql v1.7.0
@@ -38,7 +39,7 @@ require (
 	golang.org/x/sync v0.3.0
 	golang.org/x/time v0.0.0-20210611083556-38a9dc6acbc6
 	google.golang.org/appengine v1.6.7 // indirect
-	google.golang.org/protobuf v1.32.0 // indirect
+	google.golang.org/protobuf v1.32.0
 	gopkg.in/yaml.v3 v3.0.1
 )
 
