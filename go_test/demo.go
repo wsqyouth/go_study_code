@@ -9,10 +9,12 @@ import (
 	"go_test/datasource"
 )
 
+/*
 func main() {
 
 	fmt.Println("hello")
 }
+*/
 
 // IsInUint32 uint32的isin
 func IsInUint32(a uint32, array []uint32) bool {
