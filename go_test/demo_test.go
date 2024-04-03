@@ -1,6 +1,8 @@
 package main
 
 import (
+	"context"
+	"go_test/datasource"
 	"os"
 	"reflect"
 	"testing"
@@ -69,4 +71,75 @@ func TestIsTagSeq(t *testing.T) {
 	defer patches.Reset()
 	ass.Equal(true, IsTag("123"), "not ok")
 	ass.Equal(false, IsTag("123"), "not ok")
+}
+
+func TestGetDataFromDB(t *testing.T) {
+
+	tests := []struct {
+		name string
+
+		want    string
+		wantErr bool
+	}{
+		// 测试gomonky 包调用函数
+		{
+			name:    "test1",
+			want:    "123",
+			wantErr: false,
+		},
+	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+
+			var p = gomonkey.ApplyFunc(datasource.GetData, func(ctx context.Context) (string, error) {
+				return "123", nil
+			})
+			defer p.Reset()
+
+			got, err := GetDataFromDB(context.Background())
+			if (err != nil) != tt.wantErr {
+				t.Errorf("GetDataFromDB() error = %v, wantErr %v", err, tt.wantErr)
+				return
+			}
+			if got != tt.want {
+				t.Errorf("GetDataFromDB() = %v, want %v", got, tt.want)
+			}
+		})
+	}
+}
+
+func TestGetDataFromDBStruct(t *testing.T) {
+
+	tests := []struct {
+		name string
+
+		want    string
+		wantErr bool
+	}{
+		// 测试gomonky 包调用方法
+		{
+			name:    "test1",
+			want:    "123",
+			wantErr: false,
+		},
+	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			ctx := context.Background()
+			mockDs := datasource.NewMockDataSource(ctx)
+			var p = gomonkey.ApplyFunc(datasource.GetData, func(ctx context.Context) (string, error) {
+				return "123", nil
+			})
+			defer p.Reset()
+
+			got, err := GetDataFromDB()
+			if (err != nil) != tt.wantErr {
+				t.Errorf("GetDataFromDB() error = %v, wantErr %v", err, tt.wantErr)
+				return
+			}
+			if got != tt.want {
+				t.Errorf("GetDataFromDB() = %v, want %v", got, tt.want)
+			}
+		})
+	}
 }

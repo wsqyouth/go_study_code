@@ -1,9 +1,12 @@
 package main
 
 import (
+	"context"
 	"fmt"
 	"os"
 	"strings"
+
+	"go_test/datasource"
 )
 
 func main() {
@@ -53,4 +56,19 @@ func IsTag(originMonomial string) bool {
 		return false
 	}
 	return true
+}
+
+// GetDataFromDB  测试包调用函数
+func GetDataFromDB(ctx context.Context) (string, error) {
+	srcData, err := datasource.GetData(ctx)
+	fmt.Println("get data from db", srcData, err)
+	return srcData, err
+}
+
+// GetDataFromDBStruct  测试包调用方法
+func GetDataFromDBStruct(ctx context.Context) (string, error) {
+	ds := datasource.NewDataSource(ctx)
+	srcData, err := ds.GetData(ctx)
+	fmt.Println("get data from db", srcData, err)
+	return srcData, err
 }
