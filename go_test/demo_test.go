@@ -1,6 +1,5 @@
 package main
 
-/*
 import (
 	"context"
 	"go_test/datasource"
@@ -8,7 +7,9 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/agiledragon/gomonkey"
+	"github.com/agiledragon/gomonkey/v2"
+
+	// "github.com/agiledragon/gomonkey"
 	"github.com/stretchr/testify/assert"
 )
 
@@ -58,7 +59,6 @@ func TestStackLen(t *testing.T) {
 }
 
 // mock 函数序列
-// 测试函数
 func TestIsTagSeq(t *testing.T) {
 	ass := assert.New(t)
 	// 生成一个输出序列
@@ -75,7 +75,6 @@ func TestIsTagSeq(t *testing.T) {
 }
 
 func TestGetDataFromDB(t *testing.T) {
-
 	tests := []struct {
 		name string
 
@@ -127,21 +126,20 @@ func TestGetDataFromDBStruct(t *testing.T) {
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
 			ctx := context.Background()
-			mockDs := datasource.NewMockDataSource(ctx)
+			// 不知道为啥没生效: go test   -gcflags=all=-l  -run TestGetDataFromDBStruct
 			var p = gomonkey.ApplyFunc(datasource.GetData, func(ctx context.Context) (string, error) {
 				return "123", nil
 			})
 			defer p.Reset()
 
-			got, err := GetDataFromDB(ctx)
+			got, err := GetDataFromDBStruct(ctx)
 			if (err != nil) != tt.wantErr {
-				t.Errorf("GetDataFromDB() error = %v, wantErr %v", err, tt.wantErr)
+				t.Errorf("GetDataFromDBStruct() error = %v, wantErr %v", err, tt.wantErr)
 				return
 			}
 			if got != tt.want {
-				t.Errorf("GetDataFromDB() = %v, want %v", got, tt.want)
+				t.Errorf("GetDataFromDBStruct() = %v, want %v", got, tt.want)
 			}
 		})
 	}
 }
-*/

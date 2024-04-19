@@ -74,3 +74,5 @@ func GetDataFromDBStruct(ctx context.Context) (string, error) {
 	fmt.Println("get data from db", srcData, err)
 	return srcData, err
 }
+
+// 另外一个比较简单, 值得参考的文档：https://www.cnblogs.com/lanyangsh/p/14587921.html
