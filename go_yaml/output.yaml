@@ -1,0 +1,16 @@
+test_cases:
+- name: Shipper.AddressLine1 error test 字段类型不一致
+  condition:
+    shipment:
+      ship_from:
+        street1: "1863"
+        street2: S. 3850 W.
+        street3: Salt Lake City
+      ship_to:
+        street1: 1863to
+        street2: S. 3850 W.to
+        street3: Salt Lake City to
+  then: "1863"
+- name: Some other test case
+  condition: FIX ME
+  then: '{"marlsha":"ObjValue2"}'
