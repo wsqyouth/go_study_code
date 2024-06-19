@@ -32,6 +32,7 @@ require (
 	github.com/tencentcloud/tencentcloud-sdk-go/tencentcloud/common v1.0.739
 	github.com/tencentcloud/tencentcloud-sdk-go/tencentcloud/cvm v1.0.739
 	github.com/thoas/go-funk v0.9.2
+	github.com/tidwall/sjson v1.2.5 // indirect
 	github.com/wsqyouth/goinaction_code v0.0.0-20171020164608-49fc99e6affb
 	go.uber.org/zap v1.24.0
 	golang.org/x/net v0.20.0
