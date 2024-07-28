@@ -15,7 +15,6 @@ require (
 	github.com/go-redis/redis/v8 v8.11.5
 	github.com/go-redis/redis_rate/v9 v9.1.2
 	github.com/go-sql-driver/mysql v1.7.1
-	github.com/goinaction/code v0.0.0-20171020164608-49fc99e6affb
 	github.com/golang/groupcache v0.0.0-20210331224755-41bb18bfe9da
 	github.com/golang/protobuf v1.5.2
 	github.com/google/go-cmp v0.5.6
@@ -35,7 +34,6 @@ require (
 	github.com/thoas/go-funk v0.9.2
 	github.com/tidwall/gjson v1.14.2
 	github.com/tidwall/sjson v1.2.5
-	github.com/wsqyouth/goinaction_code v0.0.0-20171020164608-49fc99e6affb
 	go.uber.org/zap v1.24.0
 	golang.org/x/net v0.20.0
 	golang.org/x/oauth2 v0.0.0-20210218202405-ba52d332ba99 // indirect
