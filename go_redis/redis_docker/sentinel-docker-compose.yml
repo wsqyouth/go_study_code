@@ -1,0 +1,14 @@
+version: '3.7'
+
+services:
+  sentinel:
+    image: redis
+    network_mode: 'host'
+    container_name: sentinel-redis
+    restart: always
+    command: redis-sentinel /usr/local/etc/redis/sentinel.conf
+    ports:
+      - "26377:6377"
+    volumes:
+      - ./sentinel.conf:/usr/local/etc/redis/sentinel.conf
+

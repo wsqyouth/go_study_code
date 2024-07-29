@@ -1,0 +1,20 @@
+version: '3.7'
+
+services:
+  master:
+    image: redis
+    container_name: master-redis
+    restart: always
+    command: redis-server --port 6381
+    ports:
+      - "26381:6381"
+
+  slave:
+    image: redis
+    container_name: slave-redis
+    restart: always
+    command: redis-server --slaveof master-redis 6381
+    ports:
+      - "26378:6378"
+
+
