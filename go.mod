@@ -27,6 +27,7 @@ require (
 	github.com/natefinch/lumberjack v2.0.0+incompatible
 	github.com/pdfcpu/pdfcpu v0.8.1
 	github.com/pkg/errors v0.9.1
+	github.com/shopspring/decimal v0.0.0-20180709203117-cd690d0c9e24
 	github.com/skip2/go-qrcode v0.0.0-20200617195104-da1b6568686e
 	github.com/spf13/cobra v0.0.3
 	github.com/stretchr/testify v1.8.3
