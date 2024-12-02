@@ -11,6 +11,7 @@ require (
 	github.com/deckarep/golang-set v1.7.1
 	github.com/gammazero/workerpool v1.1.3
 	github.com/go-mysql-org/go-mysql v1.7.0
+	github.com/go-playground/validator/v10 v10.23.0
 	github.com/go-redis/redis/v7 v7.4.0
 	github.com/go-redis/redis/v8 v8.11.5
 	github.com/go-redis/redis_rate/v9 v9.1.2
@@ -30,7 +31,7 @@ require (
 	github.com/shopspring/decimal v0.0.0-20180709203117-cd690d0c9e24
 	github.com/skip2/go-qrcode v0.0.0-20200617195104-da1b6568686e
 	github.com/spf13/cobra v0.0.3
-	github.com/stretchr/testify v1.8.3
+	github.com/stretchr/testify v1.8.4
 	github.com/tencentcloud/tencentcloud-sdk-go/tencentcloud/common v1.0.739
 	github.com/tencentcloud/tencentcloud-sdk-go/tencentcloud/cvm v1.0.739
 	github.com/thoas/go-funk v0.9.2
