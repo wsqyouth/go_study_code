@@ -1,4 +1,4 @@
-package module
+package go_mock
 
 import (
 	"context"
